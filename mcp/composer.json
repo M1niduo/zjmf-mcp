@@ -1,0 +1,34 @@
+{
+    "name": "zjmf/mcp-plugin",
+    "description": "PHP 7.4 compatible MCP Server plugin for ZJMF",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4 <8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ixc-soft/mcp-sdk-php": "2.0.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        },
+        "sort-packages": true,
+        "audit": {
+            "abandoned": "ignore"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://mirrors.cloud.tencent.com/composer/"
+        },
+        {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        },
+        {
+            "packagist.org": false
+        }
+    ]
+}

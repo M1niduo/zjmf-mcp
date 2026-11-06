@@ -1,0 +1,37 @@
+{
+    "name": "ixc-soft/mcp-sdk-php",
+    "description": "Model Context Protocol SDK for PHP",
+    "type": "library",
+	"license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mcp\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "psr/log": "^1.1 | ^2.0 | ^3.0",
+        "monolog/monolog": "^2.8.0"
+    },
+    "suggest": {
+        "ext-pcntl": "For better process handling in CLI environments"
+    },
+    "require-dev": {
+        "rector/rector": "^2.1",
+        "phpunit/phpunit": "^9.6",
+        "phpstan/phpstan": "^2.1"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "check": ["@test", "@analyse"],
+        "downgrade": "rector process"
+    }
+}
